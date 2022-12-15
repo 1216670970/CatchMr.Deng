@@ -175,7 +175,7 @@ function SubmitResults() {
 function gameTime() {
     _gameTimeNum--;
     if (_gameTimeNum <= 0) {
-        GameTimeLayer.innerHTML = '&nbsp;&nbsp;&nbsp;&nbsp;时间到！';
+        GameTimeLayer.innerHTML = '&nbsp;&nbsp;&nbsp;&nbsp;考试结束！';
         gameOver();
         GameLayerBG.className += ' flash';
         createjs.Sound.play("end");
@@ -338,14 +338,14 @@ function shareText(score) {
     var date2 = new Date();
     deviation_time = (date2.getTime() - _date1.getTime())
     if (deviation_time > 23000) {
-        return '倒计时多了' + ((deviation_time / 1000) - 20).toFixed(2) + "s";
+        return '考试结束' + ((deviation_time / 1000) - 20).toFixed(2) + "s";
     }
     SubmitResults();
-    if (score <= 49) return '你让邓老师面上无光';
-    if (score <= 99) return '邓老师讲的你又不听';
-    if (score <= 149) return '这不就对了吗';
-    if (score <= 199) return '和邓老师当年的网班学生一样';
-    return '强';
+    if (score <= 49) return '别学了老废物';
+    if (score <= 99) return '下课来找我背书';
+    if (score <= 149) return '这次表现还不错';
+    if (score <= 199) return '开挂是吧';
+    return '继续努力吧废物';
 }
 
 function toStr(obj) {
