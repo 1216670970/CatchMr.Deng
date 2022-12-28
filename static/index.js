@@ -344,7 +344,7 @@ function shareText(score) {
     if (score <= 49) return '别学了老废物';
     if (score <= 99) return '下课来找我背书';
     if (score <= 149) return '这次表现还不错';
-    if (score <= 199) return '开挂是吧';
+    if (score <= 199) return '好！';
     return '继续努力吧废物';
 }
 
